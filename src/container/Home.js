@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import CartModal from '../component/CartModal'
-import SidebarModal from '../component/SidebarModal'
-import "lightgallery.js/dist/css/lightgallery.css";
 const responsives = {
     superLargeDesktop: {
         // the naming can be any, depends on you.
