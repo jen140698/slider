@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const responsive = {
+
+const responsive = { //it is for the responsive
     superLargeDesktop: {
         // the naming can be any, depends on you.
         breakpoint: { max: 4000, min: 3000 },
@@ -28,18 +29,9 @@ const responsive = {
 };
 
 function Home(props) {
-    const [size, setSize] = useState('');
     const carouselRef = useRef()
-    const [color, setColor] = useState('')
-    const [value, setValues] = useState(55)
-    const [opeGallry, setOpenGallry] = useState(false)
-
-    const handleClear = () => {
-        setColor('')
-        setSize('')
-    }
-
-
+  
+    //it is for the custom slide number
     const CustomDot = ({ onMove, index, onClick, active }) => {
         return (
             <button
@@ -51,6 +43,7 @@ function Home(props) {
         );
     };
 
+    //it is for the custom button
     const CustomButtonGroupAsArrows = ({ next, previous, ...rest }) => {
         return (
             <React.Fragment>
@@ -75,14 +68,14 @@ function Home(props) {
 
                             <section className="hero-tns-section">
                                 <div className="hero-tns">
-                                    <Carousel swipeable={true}
+                                
+                                    <Carousel swipeable={true} //it is slider
                                         ref={carouselRef}
                                         plugins={['arrows']}
                                         draggable={false}
                                         keyBoardControl={true}
                                         slidesToSlide={1}
                                         responsive={responsive}
-                                        // infinite={true}
                                         arrows={false}
                                         // autoPlay={true}
                                         showDots
